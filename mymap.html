@@ -8,7 +8,7 @@
 	function initialize() {
 		var centerlatlng = new google.maps.LatLng(40.750000, -73.900000);
 		var myOptions = {
-			zoom: 2,
+			zoom: 11,
 			center: centerlatlng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
@@ -30,6 +30,30 @@ strokeWeight: 10
 Path.setMap(map);
 
 
+var heatmap_points = [
+new google.maps.LatLng(40.765000, -73.975000),
+new google.maps.LatLng(40.745000, -73.995000),
+new google.maps.LatLng(40.745000, -73.975000),
+new google.maps.LatLng(40.785000, -73.955000),
+new google.maps.LatLng(40.765000, -73.955000),
+new google.maps.LatLng(40.725000, -73.995000),
+new google.maps.LatLng(40.765000, -73.995000),
+new google.maps.LatLng(40.785000, -73.975000),
+new google.maps.LatLng(40.725000, -73.975000),
+new google.maps.LatLng(40.645000, -73.775000),
+];
+
+var pointArray = new google.maps.MVCArray(heatmap_points);
+var heatmap;
+heatmap = new google.maps.visualization.HeatmapLayer({
+
+data: pointArray
+});
+heatmap.setMap(map);
+heatmap.set('threshold', 5);
+heatmap.set('radius', 10);
+heatmap.set('opacity', 0.600000);
+heatmap.set('dissipating', true);
 	}
 </script>
 </head>
