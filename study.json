@@ -1,0 +1,10 @@
+{
+  "name": "study-nytaxi",
+  "author": "eosg",
+  "tags": [],
+  "scripts": {
+    "start": "kyso docker start"
+  },
+  "metadata": {},
+  "_version": "ba71733de3678d1dc81b8f177dcd268a6d8bf5ab"
+}
